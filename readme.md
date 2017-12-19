@@ -1,4 +1,4 @@
-# Laravel 5.5 based demo-project: how to upload videos to Amazon S3
+# Laravel 5.5 demo: uploading videos to Amazon S3
 
 ![Larancer screenshot](http://webcoderpro.com/s3-videos-demo.png)
 
