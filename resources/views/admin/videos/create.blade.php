@@ -32,7 +32,6 @@
                         'data-bucket' => 'video',
                         'data-filekey' => 'video',
                         ]) !!}
-                       <!--  {!! Form::hidden('video_file_max_size', 400) !!} -->
                     <p class="help-block"></p>
                     <div class="photo-block">
                         <div class="progress-bar form-group">&nbsp;</div>
@@ -63,7 +62,6 @@ $(function () {
     $('.file-upload').each(function () {
         var $this = $(this);
         var $parent = $(this).parent();
-		console.log('tier 1');
         $(this).fileupload({
             maxChunkSize: 10000000, // 10 mb
             dataType: 'json',
@@ -79,10 +77,6 @@ $(function () {
                     var $line = $($('<p/>', {class: "form-group"}).html(file.name + ' (' + ((file.size / 1000000).toFixed(2)) + ' MB)')).appendTo($parent.find('.files-list'));
                  	  $line.append('<a href="#" class="btn btn-xs btn-danger remove-file">Remove</a>');
                       $line.append('<input type="hidden" name="' + $this.data('bucket') + '_id[]" value="' + file.id + '"/>');
-//                      if ($parent.find('.' + $this.data('bucket') + '-ids').val() != '') {
-//                          $parent.find('.' + $this.data('bucket') + '-ids').val($parent.find('.' + $this.data('bucket') + '-ids').val() + ',');
-//                      }
-                     console.log('tier 2');
                 });
                 $parent.find('.progress-bar').hide().css(
                     'width',
@@ -95,7 +89,6 @@ $(function () {
                 'width',
                 progress + '%'
             );
-            console.log('tier 3');
         });
     });
     $(document).on('click', '.remove-file', function () {

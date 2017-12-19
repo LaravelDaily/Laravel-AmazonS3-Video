@@ -18,7 +18,7 @@
                         </tr>
                         <tr>
                             <th>@lang('quickadmin.videos.fields.video')</th>
-                            <td field-key='video's> @foreach($video->getMedia('video') as $media)
+                            <td field-key='video'> @foreach($video->getMedia('video') as $media)
                                 <p class="form-group">
                                     <a href="{{ $media->getUrl() }}" target="_blank" download="{{ $media->getUrl() }}">{{ $media->name }} ({{ round($media->size / 1000000, 2) }} MB)</a>
                                 </p>

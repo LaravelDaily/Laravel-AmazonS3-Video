@@ -17,7 +17,7 @@ class PathGeneratorController extends BasePathGenerator
    
     public function getPath(Media $media): string
     {
-        return 'PijusVideo/'.$media->id.'/';
+        return 'Videos/'.$media->id.'/';
     }
 
     public function getPathForConversions(Media $media): string
